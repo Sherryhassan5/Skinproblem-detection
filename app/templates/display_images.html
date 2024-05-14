@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uploaded Images</title>
+</head>
+<body>
+    <h1>Uploaded Images</h1>
+    <div>
+        {% for image in images %}
+            <div>
+                <img src="{{ image.image.url }}" alt="Uploaded image" style="max-width: 200px;">
+                <p>Uploaded on: {{ image.uploaded_at }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'capture_image' %}">Capture another image</a>
+</body>
+</html>

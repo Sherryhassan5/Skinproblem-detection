@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Page</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <img src="{{ image_instance.image.url }}" alt="Captured Image">
+    <p>Predicted class: {{ predicted_class }}</p>
+    <p>Confidence: {{ confidence }}</p>
+    <a href="{% url 'capture_image' %}">Check again</a>
+</body>
+</html>
